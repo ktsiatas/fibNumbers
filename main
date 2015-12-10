@@ -1,0 +1,24 @@
+#creating fibonacci list
+def fibListCreator (n):
+    fibList=[0,1]
+    if n > 0:
+       i=2
+       while i < n:
+           if n==0:
+               fibList=[0]
+           elif n==1:
+               fibList=[0]
+           else:
+               fibList.append(fibList[i-1]+fibList[i-2])
+               i=i+1
+       if i > n:
+            fibList=[0]
+    else:
+        fibList=[]
+    return fibList
+
+#creating main program that calls fibonacci list creator
+def main ():
+    a=int(input("How many Fibonacci numbers?"))
+    fibList= fibListCreator(a)
+    return print(fibList)
